@@ -13,21 +13,21 @@ func New(app *appv1.App) *appsv1.Deployment {
 	selector := &metav1.LabelSelector{MatchLabels: labels}
 	return &appsv1.Deployment{
 		TypeMeta:   metav1.TypeMeta{
-			APIVersion: "apps/v1",
-			Kind: "Deployment",
+		APIVersion: "apps/v1",
+		Kind:       "Deployment",
 		},
 		ObjectMeta: metav1.ObjectMeta{
-			Name: app.Name,
-			Namespace: app.Namespace,
+			Name:            app.Name,
+			Namespace:       app.Namespace,
 			OwnerReferences: []metav1.OwnerReference{
 				*metav1.NewControllerRef(app, schema.GroupVersionKind{
-					Group: appv1.GroupVersion.Group,
+					Group:   appv1.GroupVersion.Group,
 					Version: appv1.GroupVersion.Version,
-					Kind: "App",
+					Kind:    "App",
 				}),
 			},
 		},
-		Spec:       appsv1.DeploymentSpec{
+		Spec: appsv1.DeploymentSpec{
 			Replicas: app.Spec.Replicas,
 			Selector: selector,
 			Template: corev1.PodTemplateSpec{

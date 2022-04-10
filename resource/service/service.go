@@ -14,8 +14,8 @@ func New(app *appv1.App) *corev1.Service {
 			APIVersion: "v1",
 		},
 		ObjectMeta: metav1.ObjectMeta{
-			Name:                       app.Name,
-			Namespace: app.Namespace,
+			Name:            app.Name,
+			Namespace:       app.Namespace,
 			OwnerReferences: []metav1.OwnerReference{
 				*metav1.NewControllerRef(app, schema.GroupVersionKind{
 					Group: appv1.GroupVersion.Group,
@@ -25,7 +25,7 @@ func New(app *appv1.App) *corev1.Service {
 			},
 		},
 		Spec: corev1.ServiceSpec{
-			Ports:                    app.Spec.Ports,
+			Ports: app.Spec.Ports,
 			Selector: map[string]string{
 				"app.example.com/v1": app.Name,
 			},

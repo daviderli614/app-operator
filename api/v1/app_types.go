@@ -33,11 +33,11 @@ import (
 type AppSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
-	Replicas *int32               `json:"replicas"`		// 副本数
-	Image    string               `json:"image"`		// 镜像
+	Replicas  *int32               `json:"replicas"`		// 副本数
+	Image     string               `json:"image"`		// 镜像
 	Resources corev1.ResourceRequirements  `json:"resources,omitempty"`	// 资源限制
-	Envs     []corev1.EnvVar      `json:"envs,omitempty"`	// 环境变量
-	Ports    []corev1.ServicePort `json:"ports,omitempty"`	// 服务端口
+	Envs      []corev1.EnvVar      `json:"envs,omitempty"`	// 环境变量
+	Ports     []corev1.ServicePort `json:"ports,omitempty"`	// 服务端口
 }
 
 // AppStatus defines the observed state of App
