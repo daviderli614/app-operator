@@ -1,6 +1,30 @@
 name: Release Charts
 on: [push, pull_request]
 
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v3.3
+        with:
+          version: v3.9.2
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.4.1
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
 #jobs:
 #  release:
 #    permissions:
@@ -30,21 +54,3 @@ on: [push, pull_request]
 #        uses: helm/chart-releaser-action@v1.4.1
 #        env:
 #          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-jobs:
-  release:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Configure Git
-        run: |
-          git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-
-      - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.4.1
-        env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
