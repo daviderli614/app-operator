@@ -13,11 +13,6 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - name: Set up Helm
-        uses: azure/setup-helm@v3.3
-        with:
-          version: v3.9.2
-
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.1
         env:
