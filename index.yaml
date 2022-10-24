@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  app:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-24T03:21:07.885890195Z"
+    description: A Helm chart for Kubernetes
+    digest: 404fd7eb529886ad63ce37805bf73cd930fb947ad331a0bc269666da640b1c66
+    name: app
+    type: application
+    urls:
+    - https://github.com/daviderli614/app-operator/releases/download/app-0.3.1/app-0.3.1.tgz
+    version: 0.3.1
+  helm-chart-sources:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-24T03:21:08.040246769Z"
+    description: A Helm chart for Kubernetes
+    digest: 833cd41561b4c8b46b1a4a14278933b88296750e36820663dc260f6f47c71a44
+    name: helm-chart-sources
+    type: application
+    urls:
+    - https://github.com/daviderli614/app-operator/releases/download/helm-chart-sources-0.3.1/helm-chart-sources-0.3.1.tgz
+    version: 0.3.1
+generated: "2022-10-24T03:21:08.040259969Z"
