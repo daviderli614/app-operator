@@ -11,6 +11,16 @@ entries:
     urls:
     - https://github.com/daviderli614/app-operator/releases/download/app-0.3.1/app-0.3.1.tgz
     version: 0.3.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-24T03:22:12.279119404Z"
+    description: A Helm chart for Kubernetes
+    digest: 9a74b23b81e1932639dd991e523bacf194a8c9beb7e2eb070d0daca3947b8867
+    name: app
+    type: application
+    urls:
+    - https://github.com/daviderli614/app-operator/releases/download/app-0.3.0/app-0.3.0.tgz
+    version: 0.3.0
   helm-chart-sources:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -22,4 +32,14 @@ entries:
     urls:
     - https://github.com/daviderli614/app-operator/releases/download/helm-chart-sources-0.3.1/helm-chart-sources-0.3.1.tgz
     version: 0.3.1
-generated: "2022-10-24T03:21:08.040259969Z"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-24T03:22:12.42844147Z"
+    description: A Helm chart for Kubernetes
+    digest: df1092866c2e7789b364d6fca356cdc9cebafc9544e933495c2270cb466814d2
+    name: helm-chart-sources
+    type: application
+    urls:
+    - https://github.com/daviderli614/app-operator/releases/download/helm-chart-sources-0.3.0/helm-chart-sources-0.3.0.tgz
+    version: 0.3.0
+generated: "2022-10-24T03:22:12.428458771Z"
