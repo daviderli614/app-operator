@@ -66,6 +66,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: |
-            greptimedb-${{ env.RELEASE_VERSION }}.tgz
-            greptimedb-operator-${{ env.RELEASE_VERSION }}.tgz
+            app-${{ env.RELEASE_VERSION }}.tgz
+            helm-chart-sources-${{ env.RELEASE_VERSION }}.tgz
           token: ${{ secrets.GITHUB_TOKEN }}
