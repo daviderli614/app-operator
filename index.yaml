@@ -3,16 +3,6 @@ entries:
   app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-11-21T09:03:19.270504905Z"
-    description: A Helm chart for Kubernetes
-    digest: b86ab87c2f739805725fb78a87825da2ae30f638e9793b7deb3fc44c4d0b2c61
-    name: app
-    type: application
-    urls:
-    - https://github.com/daviderli614/app-operator/releases/download/app-0.4.1-alpha-20221121/app-0.4.1-alpha-20221121.tgz
-    version: 0.4.1-alpha-20221121
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-11-18T08:18:52.449623375Z"
     description: A Helm chart for Kubernetes
     digest: 59cf23f876d6d1df65a07dbb90430a1cd70325c9dd5c734498d64d77e2900a37
@@ -21,6 +11,16 @@ entries:
     urls:
     - https://github.com/daviderli614/app-operator/releases/download/app-0.4.0/app-0.4.0.tgz
     version: 0.4.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-21T09:03:19.270504905Z"
+    description: A Helm chart for Kubernetes
+    digest: b86ab87c2f739805725fb78a87825da2ae30f638e9793b7deb3fc44c4d0b2c61
+    name: app
+    type: application
+    urls:
+    - https://github.com/daviderli614/app-operator/releases/download/app-0.4.1-alpha-20221121/app-0.4.1-alpha-20221121.tgz
+    version: 0.4.1-alpha-20221121
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-10-24T03:44:17.831679825Z"
