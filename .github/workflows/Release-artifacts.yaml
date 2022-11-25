@@ -23,6 +23,6 @@ jobs:
       - name: Publish release
         uses: softprops/action-gh-release@v1
         with:
-          name: "Release"
+          name: "Release ${{ github.ref_name }}"
           files: |
             greptimedbcluster.yaml
