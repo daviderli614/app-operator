@@ -1,0 +1,20 @@
+name: Release artifacts
+
+on: [push, pull_request]
+
+jobs:
+  release:
+    name: Release the artifacts
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v3
+      - name: Rename crd file
+        run: |
+          cp ./crds/bases/greptime.io_greptimedbclusters.yaml ./greptimedbcluster.yaml
+      - name: Publish release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: "Release ${{ github.ref_name }}"
+          files: |
+            greptimedbcluster.yaml
