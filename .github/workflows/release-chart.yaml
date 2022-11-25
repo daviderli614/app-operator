@@ -1,6 +1,12 @@
 name: Release Charts
 
-on: [push, pull_request]
+on:
+  push:
+    tags:
+      - 'v*'
+  pull_request:
+    tags:
+      - 'v*'
 
 jobs:
   release:
